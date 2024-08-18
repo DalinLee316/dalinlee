@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Навигация -->
+    <a href="/">Home</a>
+    <a href="/about">About Me</a>
+    <a href="/projects">My Projects</a>
+
+    <!-- Секции страницы -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Write a brief introduction about yourself here. Mention your background, skills, and interests.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <ul>
+            <li>
+                <h3>Project 1</h3>
+                <p>Description of project 1 with details about what you did, technologies used, and outcomes.</p>
+            </li>
+            <li>
+                <h3>Project 2</h3>
+                <p>Description of project 2 with details about what you did, technologies used, and outcomes.</p>
+            </li>
+            <!-- Add more projects as needed -->
+        </ul>
+    </section>
+
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <p>This is projects section.</p>
+    </section>
+
+    <!-- Модальное окно -->
+    <button id="openModal">Click me</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
+    </div>
+
+    <!-- Подключение скрипта -->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
+
