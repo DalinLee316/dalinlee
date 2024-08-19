@@ -30,5 +30,3 @@ if (modal && btn && span) {
         }
     }
 }
-
-
