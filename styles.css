@@ -14,3 +14,17 @@ a {
 a:hover {
     color: gray; /* Измените цвет текста при наведении по необходимости */
 }
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #555;
+}
