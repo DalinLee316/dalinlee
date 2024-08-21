@@ -25,14 +25,14 @@
     <main>
         <section id="intro">
             <div class="video-container">
-                <video id="backgroundVideo" autoplay muted loop playsinline>
+                <video autoplay muted loop>
                     <source src="intro.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="video-overlay"></div>
             </div>
         </section>
 
-        <!-- Секции -->
         <section id="about">
             <h2>About Me</h2>
             <p>Write a brief introduction about yourself here. Mention your background, skills, and interests.</p>
@@ -54,17 +54,6 @@
     </main>
 
     <!-- Подключение скрипта -->
-    <script>
-        // Воспроизведение видео на мобильных устройствах
-        document.addEventListener('DOMContentLoaded', function () {
-            var video = document.getElementById('backgroundVideo');
-            if (video) {
-                video.play().catch(function (error) {
-                    console.error('Auto-play was prevented:', error);
-                });
-            }
-        });
-    </script>
     <script src="scripts.js"></script>
 </body>
 </html>
