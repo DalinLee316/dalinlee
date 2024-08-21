@@ -2,8 +2,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #000; /* Черный фон для слияния с видео */
+    color: #fff; /* Цвет текста по умолчанию белый */
+    background-color: #000; /* Черный фон */
 }
 
 header {
