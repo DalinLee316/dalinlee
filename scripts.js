@@ -1,4 +1,4 @@
-// Плавный скролл при клике на ссылки с якорем
+// Плавная прокрутка якорей
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -7,5 +7,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-
-// Код для модального окна был удален
