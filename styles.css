@@ -59,6 +59,7 @@ nav ul li a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    pointer-events: none; /* Отключает взаимодействие с видео */
 }
 
 .hero-content {
@@ -121,7 +122,14 @@ section {
     .hero-content p {
         font-size: 1.2em;
     }
+
+    /* Коррекция для видео на мобильных устройствах */
+    #backgroundVideo {
+        height: auto;
+        width: 100%;
+    }
 }
+
 /* Контейнер для видео */
 .video-container {
     position: relative;
@@ -131,12 +139,13 @@ section {
     background-color: black;
 }
 
-/* Видео, встроенное через iframe */
-.video-container iframe {
+/* Видео */
+.video-container video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: 0;
+    object-fit: cover;
+    pointer-events: none; /* Отключает взаимодействие с видео */
 }
