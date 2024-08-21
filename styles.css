@@ -31,7 +31,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный оверлей */
+    background: rgba(0, 0, 0, 0.3); /* Полупрозрачный черный оверлей */
     pointer-events: none; /* Чтобы не мешать взаимодействию с видео */
 }
 
@@ -49,4 +49,23 @@ header, .hero-content, section {
     color: #fff;
     text-align: center;
     z-index: 1; /* Чтобы содержимое было над видео */
+}
+
+.hero-content h1, .hero-content p {
+    color: #fff; /* Белый цвет текста для контента */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .video-container {
+        padding-bottom: 75%; /* Адаптируйте соотношение сторон для мобильных устройств */
+    }
 }
