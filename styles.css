@@ -2,7 +2,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #333;
+    color: #fff; /* Основной цвет текста - белый */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)); /* Плавный градиент фона */
 }
 
 header {
@@ -40,7 +41,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #fff; /* Белый цвет ссылок в навигации */
     text-decoration: none;
 }
 
@@ -48,7 +49,6 @@ nav ul li a {
     position: relative;
     height: 80vh;
     overflow: hidden;
-    background: #000;
 }
 
 #backgroundVideo {
@@ -66,7 +66,7 @@ nav ul li a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
+    color: #fff; /* Белый цвет текста в hero */
     text-align: center;
 }
 
@@ -93,7 +93,7 @@ section {
 
 #about p,
 #projects ul li p {
-    color: #ddd; /* Цвет текста */
+    color: #ccc; /* Светло-серый цвет для описания */
 }
 
 #contact form {
