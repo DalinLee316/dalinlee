@@ -1,16 +1,115 @@
-/* Стили для логотипа */
-#logo {
-    width: 150px; /* Измените размер по необходимости */
-    height: auto;
-    display: block;
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #000; /* Основной цвет фона сайта */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
-a {
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: black; /* Измените цвет текста по необходимости */
 }
 
-a:hover {
-    color: gray; /* Измените цвет текста при наведении по необходимости */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff; /* Белый цвет текста для общего текста */
+}
+
+#about h2, #projects h2 {
+    color: #fff; /* Белый цвет заголовков секций */
+}
+
+#about p, #projects ul {
+    color: #ddd; /* Немного сероватый текст для описаний */
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact form label {
+    margin: 10px 0 5px;
+}
+
+#contact form input,
+#contact form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#contact form button {
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background-color: #444;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
 }
