@@ -25,14 +25,16 @@
     <main>
         <section id="intro">
             <div class="video-container">
-                <video id="backgroundVideo" autoplay muted loop playsinline>
-                    <source src="intro.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <iframe 
+                    src="https://www.youtube.com/embed/gj4KkSmPwj0?autoplay=1&controls=0&loop=1&mute=1&playlist=gj4KkSmPwj0" 
+                    title="Intro Video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
             </div>
         </section>
 
-        <!-- Секции -->
         <section id="about">
             <h2>About Me</h2>
             <p>Write a brief introduction about yourself here. Mention your background, skills, and interests.</p>
@@ -54,17 +56,6 @@
     </main>
 
     <!-- Подключение скрипта -->
-    <script>
-        // Воспроизведение видео на мобильных устройствах
-        document.addEventListener('DOMContentLoaded', function () {
-            var video = document.getElementById('backgroundVideo');
-            if (video) {
-                video.play().catch(function (error) {
-                    console.error('Auto-play was prevented:', error);
-                });
-            }
-        });
-    </script>
     <script src="scripts.js"></script>
 </body>
 </html>
