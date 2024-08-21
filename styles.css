@@ -1,0 +1,16 @@
+/* Стили для логотипа */
+#logo {
+    width: 150px; /* Измените размер по необходимости */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: black; /* Измените цвет текста по необходимости */
+}
+
+a:hover {
+    color: gray; /* Измените цвет текста при наведении по необходимости */
+}
