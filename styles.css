@@ -3,7 +3,6 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
-    background-color: #000; /* Основной цвет фона сайта */
 }
 
 header {
@@ -26,7 +25,7 @@ nav {
 }
 
 .logo img {
-    height: 40px;
+    height: 40px; /* Установите подходящий размер */
 }
 
 nav ul {
@@ -45,35 +44,46 @@ nav ul li a {
     text-decoration: none;
 }
 
-.video-container {
+.hero {
     position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+    height: 80vh;
     overflow: hidden;
+    background: #000;
 }
 
-.video-container iframe {
+#backgroundVideo {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     height: 100%;
-    border: 0;
+    object-fit: cover;
+    pointer-events: none; /* Отключает взаимодействие с видео */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.5em;
 }
 
 section {
     padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    color: #fff; /* Белый цвет текста для общего текста */
-}
-
-#about h2, #projects h2 {
-    color: #fff; /* Белый цвет заголовков секций */
-}
-
-#about p, #projects ul {
-    color: #ddd; /* Немного сероватый текст для описаний */
 }
 
 #contact form {
@@ -112,4 +122,30 @@ section {
     .hero-content p {
         font-size: 1.2em;
     }
+
+    /* Коррекция для видео на мобильных устройствах */
+    #backgroundVideo {
+        height: auto;
+        width: 100%;
+    }
+}
+
+/* Контейнер для видео */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+    overflow: hidden;
+    background-color: black;
+}
+
+/* Видео */
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Отключает взаимодействие с видео */
 }
