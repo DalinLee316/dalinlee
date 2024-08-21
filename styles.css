@@ -2,46 +2,65 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #fff; /* Белый текст по умолчанию */
-    background: #000; /* Основной цвет фона */
+    color: #333;
 }
 
-/* Контейнер для видео */
-.video-container {
-    position: relative;
+header {
+    position: fixed;
+    top: 0;
     width: 100%;
-    padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
-    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000;
 }
 
-/* Видео в контейнере */
-.video-container video {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 40px; /* Размер логотипа */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    background: #000;
+}
+
+#backgroundVideo {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Полупрозрачный наложение для гармонизации фона */
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Полупрозрачный черный оверлей */
-    pointer-events: none; /* Чтобы не мешать взаимодействию с видео */
-}
-
-/* Основной контент */
-header, .hero-content, section {
-    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон для контента */
-    color: #fff; /* Белый цвет текста для контента */
-}
-
-/* Вспомогательные стили для контента */
 .hero-content {
     position: absolute;
     top: 50%;
@@ -49,11 +68,59 @@ header, .hero-content, section {
     transform: translate(-50%, -50%);
     color: #fff;
     text-align: center;
-    z-index: 1; /* Чтобы содержимое было над видео */
 }
 
-.hero-content h1, .hero-content p {
-    color: #fff; /* Белый цвет текста для контента */
+.hero-content h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Стили для секции About Me и Projects */
+#about h2,
+#projects h2 {
+    color: #fff; /* Белый цвет заголовков */
+}
+
+#about p,
+#projects ul li p {
+    color: #ddd; /* Цвет текста */
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact form label {
+    margin: 10px 0 5px;
+}
+
+#contact form input,
+#contact form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#contact form button {
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background-color: #444;
 }
 
 /* Адаптивность */
@@ -65,8 +132,23 @@ header, .hero-content, section {
     .hero-content p {
         font-size: 1.2em;
     }
+}
 
-    .video-container {
-        padding-bottom: 75%; /* Адаптируйте соотношение сторон для мобильных устройств */
-    }
+/* Контейнер для видео */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+    overflow: hidden;
+    background-color: #000; /* Основной фон контейнера */
+}
+
+/* Видео, встроенное через iframe */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
