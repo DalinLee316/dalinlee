@@ -140,7 +140,7 @@ section {
     width: 100%;
     padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
     overflow: hidden;
-    background-color: #000; /* Основной фон контейнера */
+    background-color: black; /* Основной фон контейнера */
 }
 
 /* Видео, встроенное через iframe */
