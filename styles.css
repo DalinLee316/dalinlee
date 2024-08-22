@@ -2,37 +2,19 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #fff; /* Белый текст */
-    background-color: #000; /* Черный фон для всего сайта */
+    color: #333;
 }
 
+/* Стили для навигации */
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #000;
+    background: #333;
     color: #fff;
-    padding: 10px 0;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Центрирование содержимого по вертикали */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo img {
-    height: 120px; /* Увеличенный размер логотипа на 40% */
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
 }
@@ -44,111 +26,51 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    padding: 15px;
+    display: block;
 }
 
-/* Видео контейнер */
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
-    overflow: hidden;
-    background-color: #000;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%; /* Уменьшенный размер видео для лучшего качества */
-    height: 80vh; /* Высота видео */
-    border: 0;
-}
-
-/* Линия между видео и логотипом */
-.line-separator {
-    height: 5px;
-    background-color: #fff;
-    margin: 20px 0;
-}
-
-/* Социальные сети */
-#social-media {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-#social-media h2 {
+/* Герой-блок */
+#hero {
+    background: url('hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social-link img {
-    width: 50px; /* Размер иконок */
-    height: 50px;
-    transition: transform 0.3s ease;
-}
-
-.social-link img:hover {
-    transform: scale(1.1); /* Увеличение иконок при наведении */
-}
-
-/* Проекты */
-.projects {
     text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+.cta-button {
+    background: #f39c12;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Стили для секций */
+section {
     padding: 60px 20px;
 }
 
-.projects-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+h2 {
+    font-size: 2rem;
 }
 
-.project video {
-    width: 100%;
-    max-width: 600px; /* Максимальная ширина видео */
-    height: auto;
-}
-
-/* Анимация ссылок */
-.animated-link {
-    position: relative;
-    display: inline-block;
-}
-
-.animated-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease;
-}
-
-.animated-link:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    .logo img {
-        height: 96px; /* Уменьшенный размер логотипа на мобильных устройствах */
-    }
-
-    .video-container iframe {
-        height: 60vh; /* Уменьшенный размер видео на мобильных устройствах */
-    }
+/* Стили для футера */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
 }
