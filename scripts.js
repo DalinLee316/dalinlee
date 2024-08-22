@@ -1,13 +1,15 @@
-// Плавный скролл при клике на ссылки с якорем
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// Открытие и закрытие модального окна
+document.querySelector('.animated-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Предотвращаем переход по ссылке
+    document.getElementById('projects-modal').style.display = 'block';
 });
 
-// Код для модального окна был удален
+document.querySelector('.close').addEventListener('click', function() {
+    document.getElementById('projects-modal').style.display = 'none';
+});
 
-
+window.addEventListener('click', function(event) {
+    if (event.target === document.getElementById('projects-modal')) {
+        document.getElementById('projects-modal').style.display = 'none';
+    }
+});
