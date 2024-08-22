@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #333;
+    color: #fff; /* Белый текст */
     background-color: #000; /* Черный фон для всего сайта */
 }
 
@@ -18,15 +18,15 @@ header {
 
 nav {
     display: flex;
-    justify-content: center; /* Центрирование содержимого */
-    align-items: center;
+    flex-direction: column;
+    align-items: center; /* Центрирование содержимого по вертикали */
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .logo img {
-    height: 72px; /* Увеличенный размер логотипа */
+    height: 96px; /* Увеличенный размер логотипа на 40% */
 }
 
 nav ul {
@@ -34,6 +34,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
 }
 
 nav ul li {
@@ -57,12 +58,19 @@ nav ul li a {
 
 .video-container iframe {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     width: 100%;
-    height: 100%;
+    height: 80vh; /* Уменьшенный размер видео для улучшения качества */
     border: 0;
+}
+
+/* Линия между видео и логотипом */
+.line-separator {
+    height: 5px;
+    background-color: #fff;
+    margin: 20px 0;
 }
 
 /* Социальные сети */
@@ -82,7 +90,7 @@ nav ul li a {
 }
 
 .social-link img {
-    width: 50px; /* Размер иконок, настройте по необходимости */
+    width: 50px; /* Размер иконок */
     height: 50px;
     transition: transform 0.3s ease;
 }
@@ -91,14 +99,39 @@ nav ul li a {
     transform: scale(1.1); /* Увеличение иконок при наведении */
 }
 
-/* Проекты */
-#projects {
-    padding: 60px 20px;
-    color: #fff;
+/* Модальное окно для проектов */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8); /* Черный фон с прозрачностью */
 }
 
-.project {
-    margin-bottom: 20px;
+.modal-content {
+    background-color: #000;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #f1f1f1;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Анимация ссылок */
@@ -128,11 +161,10 @@ nav ul li a {
 /* Адаптивность */
 @media (max-width: 768px) {
     .logo img {
-        height: 60px; /* Уменьшенный размер логотипа на мобильных устройствах */
+        height: 72px; /* Уменьшенный размер логотипа на мобильных устройствах */
     }
 
     .video-container iframe {
-        top: 0;
-        transform: translate(0, 0);
+        height: 60vh; /* Уменьшенный размер видео на мобильных устройствах */
     }
 }
