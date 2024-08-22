@@ -1,5 +1,18 @@
-// Открытие и закрытие модального окна
-document.querySelector('.animated-link').addEventListener('click', function(event) {
-    event.preventDefault(); // Предотвращаем переход по ссылке
-    document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' }); // Плавный переход к секции проектов
+// Пример скрипта для плавного прокручивания до секций при клике на ссылки
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('nav a');
+
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    });
 });
