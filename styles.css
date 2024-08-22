@@ -26,7 +26,7 @@ nav {
 }
 
 .logo img {
-    height: 96px; /* Увеличенный размер логотипа на 40% */
+    height: 120px; /* Увеличенный размер логотипа на 40% */
 }
 
 nav ul {
@@ -61,8 +61,8 @@ nav ul li a {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    height: 80vh; /* Уменьшенный размер видео для улучшения качества */
+    width: 90%; /* Уменьшенный размер видео для лучшего качества */
+    height: 80vh; /* Высота видео */
     border: 0;
 }
 
@@ -99,39 +99,23 @@ nav ul li a {
     transform: scale(1.1); /* Увеличение иконок при наведении */
 }
 
-/* Модальное окно для проектов */
-.modal {
-    display: none; /* Скрыто по умолчанию */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
+/* Проекты */
+.projects {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project video {
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.8); /* Черный фон с прозрачностью */
-}
-
-.modal-content {
-    background-color: #000;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    color: #fff;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #f1f1f1;
-    text-decoration: none;
-    cursor: pointer;
+    max-width: 600px; /* Максимальная ширина видео */
+    height: auto;
 }
 
 /* Анимация ссылок */
@@ -161,7 +145,7 @@ nav ul li a {
 /* Адаптивность */
 @media (max-width: 768px) {
     .logo img {
-        height: 72px; /* Уменьшенный размер логотипа на мобильных устройствах */
+        height: 96px; /* Уменьшенный размер логотипа на мобильных устройствах */
     }
 
     .video-container iframe {
