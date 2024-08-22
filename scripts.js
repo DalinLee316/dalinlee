@@ -1,5 +1,5 @@
-// Пример скрипта для плавного прокручивания до секций при клике на ссылки
 document.addEventListener('DOMContentLoaded', function() {
+    // Плавная прокрутка до секций при клике на ссылки
     const links = document.querySelectorAll('nav a');
 
     links.forEach(link => {
@@ -14,5 +14,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 behavior: 'smooth'
             });
         });
+    });
+
+    // Пример динамических эффектов (например, добавление класса при прокрутке)
+    const sections = document.querySelectorAll('section');
+    
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+    
+    sections.forEach(section => {
+        observer.observe(section);
     });
 });
