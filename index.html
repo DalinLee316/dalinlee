@@ -14,7 +14,7 @@
                 <img src="logo.png" alt="Logo">
             </a>
             <ul>
-                <li><a href="#projects" class="animated-link">My Projects</a></li>
+                <li><a href="#social-media" class="animated-link">Contacts</a></li>
             </ul>
         </nav>
     </header>
@@ -31,11 +31,12 @@
                     allowfullscreen>
                 </iframe>
             </div>
+            <div class="line-separator"></div>
         </section>
 
         <!-- Социальные сети -->
         <section id="social-media">
-            <h2>Follow Me</h2>
+            <h2>Contacts</h2>
             <div class="social-links">
                 <a href="https://www.instagram.com/yourusername" class="social-link" target="_blank">
                     <img src="instagram-icon.png" alt="Instagram">
@@ -49,21 +50,16 @@
             </div>
         </section>
 
-        <!-- Проекты -->
-        <section id="projects">
-            <h2>My Projects</h2>
-            <!-- Пример проекта, добавьте свои -->
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of project 1, including technologies used and outcomes.</p>
+        <!-- Модальное окно для проектов -->
+        <div id="projects-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <video controls>
+                    <source src="intro.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of project 2, including technologies used and outcomes.</p>
-            </div>
-        </section>
-        
-        <!-- Логотип и другие секции -->
+        </div>
     </main>
 
     <!-- Подключение скрипта -->
