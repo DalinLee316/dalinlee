@@ -9,6 +9,11 @@ body {
 header {
     background: #333;
     color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -28,6 +33,11 @@ nav ul li a {
     text-decoration: none;
     padding: 15px;
     display: block;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
 }
 
 /* Герой-блок */
@@ -40,14 +50,20 @@ nav ul li a {
     justify-content: center;
     color: #fff;
     text-align: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .hero-content h1 {
     font-size: 3rem;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
 }
 
 .hero-content p {
     font-size: 1.5rem;
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards;
+    animation-delay: 0.5s;
 }
 
 .cta-button {
@@ -56,21 +72,17 @@ nav ul li a {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards;
+    animation-delay: 1s;
 }
 
 /* Стили для секций */
 section {
     padding: 60px 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
 }
 
 h2 {
-    font-size: 2rem;
-}
-
-/* Стили для футера */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
+    font-size: 
