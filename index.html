@@ -3,69 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Ваш сайт</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Навигация -->
     <header>
         <nav>
-            <a href="index.html" class="logo">
-                <img src="logo.png" alt="Logo">
-            </a>
             <ul>
-                <li><a href="#projects" class="animated-link">My Projects</a></li>
+                <li><a href="#section1">Раздел 1</a></li>
+                <li><a href="#section2">Раздел 2</a></li>
+                <li><a href="#section3">Раздел 3</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Основной контент -->
-    <main>
-        <section id="intro">
-            <div class="video-container">
-                <iframe 
-                    src="https://www.youtube.com/embed/gj4KkSmPwj0?autoplay=1&controls=0&loop=1&mute=1&playlist=gj4KkSmPwj0" 
-                    title="Intro Video" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <div class="line-separator"></div>
-        </section>
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Ваш заголовок</h1>
+            <p>Ваше описание</p>
+            <a href="#section1" class="cta-button">Узнать больше</a>
+        </div>
+    </section>
 
-        <!-- Социальные сети -->
-        <section id="social-media">
-            <h2>Contacts</h2>
-            <div class="social-links">
-                <a href="https://www.instagram.com/yourusername" class="social-link" target="_blank">
-                    <img src="instagram-icon.png" alt="Instagram">
-                </a>
-                <a href="https://www.youtube.com/channel/yourchannel" class="social-link" target="_blank">
-                    <img src="youtube-icon.png" alt="YouTube">
-                </a>
-                <a href="https://www.tiktok.com/@yourusername" class="social-link" target="_blank">
-                    <img src="tiktok-icon.png" alt="TikTok">
-                </a>
-            </div>
-        </section>
+    <section id="section1">
+        <h2>Раздел 1</h2>
+        <p>Контент раздела 1.</p>
+    </section>
 
-        <!-- Модальное окно для проектов -->
-        <section id="projects" class="projects">
-            <h2>My Projects</h2>
-            <div class="projects-container">
-                <div class="project">
-                    <video controls>
-                        <source src="intro.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <!-- Здесь можно добавить другие видео по аналогии -->
-            </div>
-        </section>
-    </main>
+    <section id="section2">
+        <h2>Раздел 2</h2>
+        <p>Контент раздела 2.</p>
+    </section>
 
-    <!-- Подключение скрипта -->
+    <section id="section3">
+        <h2>Раздел 3</h2>
+        <p>Контент раздела 3.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ваш сайт</p>
+    </footer>
+
     <script src="scripts.js"></script>
 </body>
 </html>
+
