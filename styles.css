@@ -26,7 +26,7 @@ body {
     /* Устанавливает размер шрифта логотипа на 8 раз больше базового размера. */
     letter-spacing: 1rem;
     /* Устанавливает расстояние между буквами на 1 рем. */
-    background: url('palms-pattern.jpg') no-repeat center;
+    background: url('https://github.com/DalinLee316/dalinlee/raw/main/palms-pattern.jpg') no-repeat center;
     /* Устанавливает фоновое изображение для текста логотипа. */
     -webkit-background-clip: text;
     /* Применяет фоновое изображение к тексту (для WebKit браузеров). */
