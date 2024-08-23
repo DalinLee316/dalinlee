@@ -15,28 +15,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Не нужно устанавливать фоновое изображение здесь, так как оно будет устанавливаться непосредственно в #logo. */
     opacity: 0;
-    /* Начальная непрозрачность контейнера логотипа (скрыто). */
     animation: fadeIn 3s forwards;
 }
 
 #logo {
-    font-size: 8rem;
-    /* Устанавливает размер шрифта логотипа на 8 раз больше базового размера. */
-    letter-spacing: 1rem;
-    /* Устанавливает расстояние между буквами на 1 рем. */
-    background: url('https://github.com/DalinLee316/dalinlee/raw/main/palms-pattern.jpg') no-repeat center;
-    /* Устанавливает фоновое изображение для текста логотипа. */
-    -webkit-background-clip: text;
-    /* Применяет фоновое изображение к тексту (для WebKit браузеров). */
+    width: 100%;
+    height: 100%;
+    background: url('https://github.com/DalinLee316/dalinlee/raw/main/palms-pattern.jpg') no-repeat center center;
     background-size: cover;
-    /* Устанавливает размер фона таким образом, чтобы изображение полностью покрывало текст. */
-    color: transparent;
-    /* Делаем текст прозрачным, чтобы фон отображался через текст. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent; /* Убедитесь, что текст прозрачный, если он есть */
+    font-size: 0; /* Убирает текст */
 }
-
-
 
 /* Меню */
 #menu {
