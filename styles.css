@@ -11,21 +11,18 @@ body {
 
 /* Логотип */
 #logo-container {
-    height: 100vh;
+    height: 100vh; /* Высота контейнера */
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    animation: fadeIn 3s forwards;
+    background: url('palms-pattern.jpg') no-repeat center center; /* Фоновое изображение */
+    background-size: cover; /* Масштабирование изображения, чтобы оно покрывало весь контейнер */
 }
 
 #logo {
     font-size: 8rem;
     letter-spacing: 1rem;
-    background: url('palms-pattern.jpg') no-repeat center center;
-    background-size: cover; /* Изменяет размер изображения, чтобы оно полностью заполнило область */
-    -webkit-background-clip: text; /* Показывает изображение только через текст */
-    color: transparent; /* Делает текст прозрачным, чтобы показать изображение */
+    color: #fff; /* Цвет текста логотипа */
 }
 
 
