@@ -15,7 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 1; /* Убедитесь, что элемент видим */
+    opacity: 0; /* Начальная непрозрачность */
     animation: fadeIn 3s forwards;
 }
 
@@ -52,7 +52,8 @@ body {
     justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
-    opacity: 1;
+    opacity: 0; /* Начальная непрозрачность */
+    animation: fadeIn 4s 1s forwards; /* Плавное появление с задержкой */
 }
 
 #menu a {
@@ -68,10 +69,11 @@ body {
     left: 1rem;
     display: flex;
     gap: 1rem;
-    opacity: 1;
+    opacity: 0; /* Начальная непрозрачность */
+    animation: fadeIn 4s 2s forwards; /* Плавное появление с задержкой */
 }
 
-#social-links img {
+.social-icon {
     width: 40px;
     height: 40px;
 }
@@ -90,11 +92,6 @@ body {
 @keyframes slideIn {
     from { transform: translateY(50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
-}
-
-/* Плавное появление меню и соцсетей */
-.menu-appear, .social-appear {
-    animation: fadeIn 1s forwards, slideIn 1s forwards;
 }
 
 /* Плавное появление контента */
