@@ -1,9 +1,9 @@
 /* Общие стили */
-body {
-    margin: 0;
+margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000;
+    height: 100vh; /* Высота 100% от высоты экрана */
+    background: url('palms-pattern.jpg') no-repeat center center fixed; /* Установка фонового изображения */
+    background-size: cover; /* Масштабирование изображения для покрытия всей области */
     color: #fff;
     text-align: center;
     overflow-x: hidden;
