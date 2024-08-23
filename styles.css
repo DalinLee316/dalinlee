@@ -11,12 +11,12 @@ body {
 
 /* Логотип */
 #logo-container {
-    height: 100vh; /* Высота контейнера */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('palms-pattern.jpg') no-repeat center center; /* Фоновое изображение */
-    background-size: cover; /* Масштабирование изображения, чтобы оно покрывало весь контейнер */
+    opacity: 0;
+    animation: fadeIn 3s forwards;
 }
 
 #logo {
