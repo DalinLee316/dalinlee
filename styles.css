@@ -22,8 +22,11 @@ body {
 #logo {
     font-size: 8rem;
     letter-spacing: 1rem;
-    color: #fff; /* Цвет текста логотипа */
+    background: url('images/palms-pattern.png') no-repeat center;
+    -webkit-background-clip: text;
+    color: transparent;
 }
+
 
 
 
