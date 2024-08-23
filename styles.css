@@ -22,10 +22,12 @@ body {
 #logo {
     font-size: 8rem;
     letter-spacing: 1rem;
-    background: url('palms-pattern.png') no-repeat center;
-    -webkit-background-clip: text;
-    color: transparent;
+    background: url('palms-pattern.jpg') no-repeat center center;
+    background-size: cover; /* Изменяет размер изображения, чтобы оно полностью заполнило область */
+    -webkit-background-clip: text; /* Показывает изображение только через текст */
+    color: transparent; /* Делает текст прозрачным, чтобы показать изображение */
 }
+
 
 
 
