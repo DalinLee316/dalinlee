@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Подключение шрифта Comfortaa -->
     <style>
         /* Специфичные стили для страницы "My Projects" */
         .video-container {
@@ -46,11 +47,12 @@
 
         /* Стили для ссылки на главную страницу */
         .home-link {
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-            width: 50px; /* Размер изображения */
-            height: 50px; /* Размер изображения */
+            position: absolute;
+            top: 10px; /* Отступ сверху */
+            left: 50%; /* По центру по горизонтали */
+            transform: translateX(-50%); /* Центрирование по горизонтали */
+            width: 80px; /* Размер изображения */
+            height: 80px; /* Размер изображения */
             background: url('https://github.com/DalinLee316/dalinlee/raw/main/palms-pattern.jpg') no-repeat center center;
             background-size: cover;
             opacity: 0.8; /* Прозрачность изображения */
@@ -63,6 +65,9 @@
     </style>
 </head>
 <body>
+    <!-- Ссылка на главную страницу -->
+    <a href="index.html" class="home-link" title="Back to Home"></a>
+
     <!-- Заголовок -->
     <h1 class="fadeInTitle">My Projects</h1>
 
@@ -73,9 +78,6 @@
             Ваш браузер не поддерживает видео.
         </video>
     </div>
-    
-    <!-- Ссылка на главную страницу -->
-    <a href="index.html" class="home-link" title="Back to Home"></a>
     
     <!-- Остальное содержимое -->
     <p>Здесь вы можете разместить свои проекты.</p>
