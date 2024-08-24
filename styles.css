@@ -9,6 +9,21 @@ body {
     overflow-x: hidden;
 }
 
+/* Кнопка назад */
+.back-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover {
+    transform: scale(1.2);
+}
+
 /* Секция About Me */
 #about-me-section {
     padding: 3rem;
@@ -46,23 +61,7 @@ body {
     50% { border-color: #fff; }
 }
 
-/* Главная страница: Общие стили */
-#logo-container {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: fadeIn 3s forwards;
-}
-
-#menu {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 3rem;
-    animation: fadeIn 4s 1s forwards;
-}
-
+/* Стили для главной страницы */
 #menu a {
     font-size: 2.5rem;
     color: #fff;
@@ -74,30 +73,6 @@ body {
     transform: scale(1.1);
 }
 
-#social-links {
-    top: 1rem;
-    left: 1rem;
-    display: flex;
-    gap: 1rem;
-    position: absolute;
-}
-
-#social-links img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-}
-
 #social-links img:hover {
     transform: scale(1.2);
-}
-
-@media (max-width: 767px) {
-    #logo-container {
-        height: 60vh;
-    }
-
-    #menu {
-        margin-top: 2rem;
-    }
 }
