@@ -106,15 +106,6 @@ body {
     animation: fadeIn 2s forwards;
 }
 
-/* Видео */
-video {
-    width: 100%;
-    height: auto;
-    max-width: 70%; /* Уменьшенный масштаб видео */
-    display: block;
-    margin: 0 auto;
-}
-
 /* Ссылка на главную страницу */
 .return-home {
     position: absolute;
