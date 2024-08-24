@@ -17,14 +17,13 @@ body {
     align-items: center;
     opacity: 0; /* Начальная непрозрачность */
     animation: fadeIn 3s forwards;
-    background: url('https://github.com/DalinLee316/dalinlee/raw/main/palms-pattern.jpg') no-repeat center center;
-    background-size: cover;
-    margin-top: 0; /* Добавлено для управления позиционированием на мобильных устройствах */
 }
 
 #logo {
     width: 100%;
     height: 100%;
+    background: url('https://github.com/DalinLee316/dalinlee/raw/main/palms-pattern.jpg') no-repeat center center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,17 +32,16 @@ body {
 
 /* Медиа-запросы для мобильных устройств */
 @media (max-width: 767px) {
-    #logo-container {
-        background-position: center center; /* Центрирование изображения по центру */
-        background-size: cover; /* Обеспечивает покрытие фона на экране */
-        margin-top: 10%; /* Спускаем фоновое изображение вниз */
+    #logo {
+        background-position: center top; /* Центрирование изображения по верхнему краю */
+        background-size: contain; /* Уменьшение фона, чтобы он полностью помещался в элементе */
     }
 
     #menu {
         display: flex;
         justify-content: center;
-        gap: 1.5rem; /* Увеличиваем расстояние между ссылками */
-        margin-top: 1rem; /* Поднимаем ссылки ближе к фоновому изображению */
+        gap: 2rem; /* Увеличиваем расстояние между ссылками */
+        margin-top: 2rem; /* Поднимаем ссылки ближе к фоновому изображению */
         opacity: 0; /* Начальная непрозрачность */
         animation: fadeIn 4s 1s forwards; /* Плавное появление с задержкой */
     }
@@ -51,8 +49,7 @@ body {
     #menu a {
         color: #fff;
         text-decoration: none;
-        font-size: 2rem; /* Увеличиваем размер текста ссылок на мобильных устройствах */
-        animation: none; /* Отключаем анимацию для мобильной версии */
+        font-size: 1.5rem; /* Увеличиваем размер текста ссылок на мобильных устройствах */
     }
 }
 
@@ -91,10 +88,6 @@ body {
     animation: fadeIn 4s 2s forwards; /* Плавное появление с задержкой */
 }
 
-#social-links a {
-    color: #fff; /* Цвет ссылки для соцсетей */
-}
-
 #social-links img {
     width: 40px; /* Исходный размер иконок */
     height: 40px; /* Исходный размер иконок */
@@ -123,7 +116,7 @@ body {
 
 /* Стили для страницы My projects */
 #intro-video {
-    width: 70%; /* Уменьшаем масштаб видео на странице */
+    width: 100%; /* Устанавливаем масштаб видео на странице */
     max-width: 100%; /* Убеждаемся, что видео не выходит за пределы экрана */
     display: block;
     margin: 1rem auto; /* Центрируем видео и добавляем отступы */
@@ -140,3 +133,4 @@ body {
     display: block;
     z-index: 10; /* Убедимся, что изображение поверх других элементов */
 }
+
