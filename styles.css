@@ -17,13 +17,14 @@ body {
     align-items: center;
     opacity: 0; /* Начальная непрозрачность */
     animation: fadeIn 3s forwards;
+    background: url('https://github.com/DalinLee316/dalinlee/raw/main/palms-pattern.jpg') no-repeat center center;
+    background-size: cover;
+    margin-top: 0; /* Добавлено для управления позиционированием на мобильных устройствах */
 }
 
 #logo {
     width: 100%;
     height: 100%;
-    background: url('https://github.com/DalinLee316/dalinlee/raw/main/palms-pattern.jpg') no-repeat center center;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,9 +33,26 @@ body {
 
 /* Медиа-запросы для мобильных устройств */
 @media (max-width: 767px) {
-    #logo {
-        background-position: center top; /* Центрирование изображения по верхнему краю */
-        background-size: contain; /* Уменьшение фона, чтобы он полностью помещался в элементе */
+    #logo-container {
+        background-position: center center; /* Центрирование изображения по центру */
+        background-size: cover; /* Обеспечивает покрытие фона на экране */
+        margin-top: 10%; /* Спускаем фоновое изображение вниз */
+    }
+
+    #menu {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem; /* Увеличиваем расстояние между ссылками */
+        margin-top: 1rem; /* Поднимаем ссылки ближе к фоновому изображению */
+        opacity: 0; /* Начальная непрозрачность */
+        animation: fadeIn 4s 1s forwards; /* Плавное появление с задержкой */
+    }
+
+    #menu a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 2rem; /* Увеличиваем размер текста ссылок на мобильных устройствах */
+        animation: none; /* Отключаем анимацию для мобильной версии */
     }
 }
 
@@ -50,8 +68,8 @@ body {
 #menu {
     display: flex;
     justify-content: center;
-    gap: 3rem; /* Увеличенное расстояние между ссылками */
-    margin-top: 1rem; /* Приподнятие ссылок ближе к фоновому изображению */
+    gap: 2rem;
+    margin-top: 2rem;
     opacity: 0; /* Начальная непрозрачность */
     animation: fadeIn 4s 1s forwards; /* Плавное появление с задержкой */
 }
@@ -59,14 +77,7 @@ body {
 #menu a {
     color: #fff;
     text-decoration: none;
-    font-size: 2rem; /* Увеличенный размер шрифта для ссылок */
-    position: relative; /* Необходим для анимации */
-    transition: transform 0.3s ease, color 0.3s ease; /* Плавная анимация при наведении */
-}
-
-#menu a:hover {
-    transform: scale(1.1); /* Увеличение ссылки при наведении */
-    color: #f0f0f0; /* Изменение цвета текста при наведении */
+    font-size: 1.5rem;
 }
 
 /* Социальные ссылки */
@@ -78,6 +89,10 @@ body {
     gap: 1rem;
     opacity: 0; /* Начальная непрозрачность */
     animation: fadeIn 4s 2s forwards; /* Плавное появление с задержкой */
+}
+
+#social-links a {
+    color: #fff; /* Цвет ссылки для соцсетей */
 }
 
 #social-links img {
@@ -106,20 +121,22 @@ body {
     animation: fadeIn 2s forwards;
 }
 
-/* Ссылка на главную страницу */
-.return-home {
-    position: absolute;
-    top: 20px; /* Отступ сверху */
-    left: 20px; /* Отступ слева */
-    width: 80px; /* Увеличенный размер изображения */
-    height: auto;
-    background: url('https://github.com/DalinLee316/dalinlee/raw/main/palms-pattern.jpg') no-repeat center center;
-    background-size: cover;
+/* Стили для страницы My projects */
+#intro-video {
+    width: 70%; /* Уменьшаем масштаб видео на странице */
+    max-width: 100%; /* Убеждаемся, что видео не выходит за пределы экрана */
     display: block;
-    z-index: 10; /* Слой выше, чтобы не скрывалось */
-    transition: transform 0.3s ease; /* Плавная анимация при наведении */
+    margin: 1rem auto; /* Центрируем видео и добавляем отступы */
 }
 
-.return-home:hover {
-    transform: scale(1.1); /* Увеличение при наведении */
+#back-to-home {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: auto; /* Автоматическая ширина */
+    height: auto; /* Автоматическая высота */
+    max-width: 100px; /* Максимальная ширина изображения */
+    max-height: 100px; /* Максимальная высота изображения */
+    display: block;
+    z-index: 10; /* Убедимся, что изображение поверх других элементов */
 }
