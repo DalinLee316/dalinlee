@@ -13,7 +13,7 @@
             justify-content: flex-start;
             align-items: center;
             padding: 20px;
-            margin-top: 80px; /* Отступ от заголовка для избегания перекрытия */
+            margin-top: 60px; /* Отступ от заголовка для избегания перекрытия */
             opacity: 0; /* Начальная непрозрачность */
             animation: fadeInVideo 2s 1s forwards; /* Плавное появление видео с задержкой */
         }
@@ -28,6 +28,7 @@
             opacity: 0; /* Начальная непрозрачность заголовка */
             animation: fadeInTitle 2s forwards; /* Плавное появление заголовка */
             margin-top: 20px;
+            position: relative; /* Относительное позиционирование для ссылки */
         }
 
         /* Плавное появление заголовка */
@@ -43,9 +44,9 @@
         /* Стили для ссылки на главную страницу */
         .home-link {
             position: absolute;
-            top: 10px; /* Отступ сверху */
-            left: 10px; /* Отступ слева */
-            width: 150px; /* Размер изображения */
+            top: 20px; /* Расположение на уровне с заголовком */
+            left: 20px; /* Расположение в левом верхнем углу */
+            width: 120px; /* Размер изображения */
             height: auto; /* Высота автоматически для сохранения пропорций */
             background: url('https://github.com/DalinLee316/dalinlee/raw/main/palms-pattern.jpg') no-repeat center center;
             background-size: contain; /* Сохранение целостности изображения */
@@ -59,7 +60,7 @@
 
         @media (max-width: 767px) {
             .home-link {
-                width: 120px; /* Меньший размер для мобильных устройств */
+                width: 100px; /* Меньший размер для мобильных устройств */
             }
 
             .video-container video {
