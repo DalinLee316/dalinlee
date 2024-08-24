@@ -41,26 +41,36 @@
             to { opacity: 1; }
         }
 
-        /* Стили для ссылки на главную страницу */
+        /* Стили для стрелки */
         .home-link {
             position: absolute;
             top: 20px; /* Расположение на уровне с заголовком */
             left: 20px; /* Расположение в левом верхнем углу */
-            width: 120px; /* Размер изображения */
-            height: auto; /* Высота автоматически для сохранения пропорций */
-            background: url('https://github.com/DalinLee316/dalinlee/raw/main/palms-pattern.jpg') no-repeat center center;
-            background-size: contain; /* Сохранение целостности изображения */
-            opacity: 0.8; /* Прозрачность изображения */
+            font-size: 24px; /* Размер стрелки */
+            color: #fff; /* Цвет стрелки */
+            text-decoration: none; /* Убрать подчеркивание */
             z-index: 1000; /* Убедитесь, что ссылка находится поверх всего остального контента */
+            transition: transform 0.3s, opacity 0.3s; /* Плавные изменения при наведении и нажатии */
         }
 
         .home-link:hover {
-            opacity: 1; /* Полная видимость при наведении */
+            transform: scale(1.1); /* Увеличение стрелки при наведении */
+            opacity: 0.8; /* Прозрачность при наведении */
+        }
+
+        .home-link:active {
+            transform: scale(0.9); /* Уменьшение стрелки при нажатии */
+        }
+
+        /* Стиль для стрелки */
+        .home-link::before {
+            content: '←'; /* Стрелка влево */
+            font-size: 24px; /* Размер стрелки */
         }
 
         @media (max-width: 767px) {
             .home-link {
-                width: 100px; /* Меньший размер для мобильных устройств */
+                font-size: 20px; /* Меньший размер стрелки для мобильных устройств */
             }
 
             .video-container video {
