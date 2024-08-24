@@ -13,13 +13,13 @@
             justify-content: flex-start;
             align-items: center;
             padding: 20px;
-            margin-top: 20px;
+            margin-top: 60px; /* Отступ от заголовка */
             opacity: 0; /* Начальная непрозрачность */
             animation: fadeInVideo 2s 1s forwards; /* Плавное появление видео с задержкой */
         }
 
         .video-container video {
-            width: 30%; /* Уменьшение масштаба видео до 70% */
+            width: 70%; /* Уменьшение масштаба видео до 70% */
             height: auto;
             object-fit: cover; /* Сохранение пропорций видео */
         }
@@ -27,6 +27,7 @@
         .fadeInTitle {
             opacity: 0; /* Начальная непрозрачность заголовка */
             animation: fadeInTitle 2s forwards; /* Плавное появление заголовка */
+            margin-top: 20px;
         }
 
         /* Плавное появление заголовка */
@@ -48,11 +49,10 @@
         /* Стили для ссылки на главную страницу */
         .home-link {
             position: absolute;
-            top: 10px; /* Отступ сверху */
-            left: 50%; /* По центру по горизонтали */
-            transform: translateX(-50%); /* Центрирование по горизонтали */
-            width: 80px; /* Размер изображения */
-            height: 80px; /* Размер изображения */
+            top: 20px; /* Отступ сверху */
+            left: 20px; /* Отступ слева */
+            width: 100px; /* Размер изображения */
+            height: 100px; /* Размер изображения */
             background: url('https://github.com/DalinLee316/dalinlee/raw/main/palms-pattern.jpg') no-repeat center center;
             background-size: cover;
             opacity: 0.8; /* Прозрачность изображения */
@@ -61,6 +61,17 @@
 
         .home-link:hover {
             opacity: 1; /* Полная видимость при наведении */
+        }
+
+        @media (max-width: 767px) {
+            .home-link {
+                width: 80px; /* Меньший размер для мобильных устройств */
+                height: 80px; /* Меньший размер для мобильных устройств */
+            }
+
+            .video-container video {
+                width: 90%; /* Увеличение масштаба видео для мобильных устройств */
+            }
         }
     </style>
 </head>
@@ -79,9 +90,8 @@
         </video>
     </div>
     
-    <!-- Остальное содержимое -->
-    <p>Здесь вы можете разместить свои проекты.</p>
-
+    <!-- Удалено: ненужное содержимое -->
+    
     <script>
         // Скрипт для открытия видео во весь экран при нажатии
         document.querySelector('video').addEventListener('click', function () {
