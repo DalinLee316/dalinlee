@@ -43,6 +43,23 @@
             width: 100vw; /* Ширина на весь экран */
             height: 100vh; /* Высота на весь экран */
         }
+
+        /* Стили для ссылки на главную страницу */
+        .home-link {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            width: 50px; /* Размер изображения */
+            height: 50px; /* Размер изображения */
+            background: url('https://github.com/DalinLee316/dalinlee/raw/main/palms-pattern.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.8; /* Прозрачность изображения */
+            z-index: 1000; /* Убедитесь, что ссылка находится поверх всего остального контента */
+        }
+
+        .home-link:hover {
+            opacity: 1; /* Полная видимость при наведении */
+        }
     </style>
 </head>
 <body>
@@ -56,6 +73,9 @@
             Ваш браузер не поддерживает видео.
         </video>
     </div>
+    
+    <!-- Ссылка на главную страницу -->
+    <a href="index.html" class="home-link" title="Back to Home"></a>
     
     <!-- Остальное содержимое -->
     <p>Здесь вы можете разместить свои проекты.</p>
