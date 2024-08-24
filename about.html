@@ -32,16 +32,12 @@
             animation: fadeIn 2s forwards;
         }
 
-        /* Эффект печатной машинки */
+        /* Плавное появление текста */
         #typed-text {
             font-size: 1.5rem;
             white-space: pre-wrap; /* Поддержка переноса строк */
-            border-right: 2px solid #fff;
-            overflow: hidden;
             opacity: 0;
-            animation: typing 6s steps(40, end) 2s forwards, blink-caret 0.75s step-end infinite;
-            display: inline-block; /* Убедитесь, что текст не выходит за пределы блока */
-            width: 100%; /* Полная ширина контейнера */
+            animation: fadeInText 4s 2s forwards; /* Плавное появление текста с задержкой */
         }
 
         /* Анимации */
@@ -49,14 +45,9 @@
             to { opacity: 1; }
         }
 
-        @keyframes typing {
-            from { width: 0; opacity: 1; }
-            to { width: 100%; opacity: 1; }
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: #fff; }
+        @keyframes fadeInText {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
@@ -70,36 +61,14 @@
     </div>
     <section id="about-me-section">
         <h2 id="about-me-heading">About Me</h2>
-        <p id="typed-text"></p> <!-- Текст с эффектом печатной машинки -->
+        <p id="typed-text">
+            Hello! My name is Dalin, and I’m a freelancer with a diverse skill set.
+            I work with tools like CapCut, Adobe Photoshop, After Effects, and have experience in Python, CSS, and JavaScript.
+            Additionally, I use Canva to create visual content. I recently moved to Toronto, Canada, to further develop my skills and explore new exciting projects.
+            I’m dedicated to quality work and always strive to complete tasks as quickly as possible while considering my clients' needs.
+            I’m fluent in English, Russian, Ukrainian, and Spanish, which allows me to work with clients from all over the world.
+        </p> <!-- Текст с плавным появлением -->
     </section>
     <script src="scripts.js"></script> <!-- Подключение скрипта -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Плавное появление заголовка на странице About Me
-            setTimeout(() => {
-                document.getElementById("about-me-heading").style.opacity = "1";
-            }, 1000);
-
-            // Эффект печатной машинки для текста на странице About Me
-            const text = `Hello! My name is Dalin, and I’m a freelancer with a diverse skill set.
-I work with tools like CapCut, Adobe Photoshop, After Effects, and have experience in Python, CSS, and JavaScript.
-Additionally, I use Canva to create visual content. I recently moved to Toronto, Canada, to further develop my skills and explore new exciting projects.
-I’m dedicated to quality work and always strive to complete tasks as quickly as possible while considering my clients' needs.
-I’m fluent in English, Russian, Ukrainian, and Spanish, which allows me to work with clients from all over the world.`;
-            let index = 0;
-            const speed = 30; // Увеличенная скорость печатания
-            const typedTextElement = document.getElementById("typed-text");
-
-            function typeWriter() {
-                if (index < text.length) {
-                    typedTextElement.innerHTML += text.charAt(index);
-                    index++;
-                    setTimeout(typeWriter, speed);
-                }
-            }
-
-            setTimeout(typeWriter, 2000); // Задержка перед началом эффекта печатной машинки
-        });
-    </script>
 </body>
 </html>
