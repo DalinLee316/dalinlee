@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Comfortaa', Arial, sans-serif; /* Применение шрифта Comfortaa */
+    font-family: 'Comfortaa', Arial, sans-serif; /* Подключение шрифта Comfortaa */
     background-color: #000;
     color: #fff;
     text-align: center;
@@ -15,7 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
+    opacity: 0; /* Начальная непрозрачность */
     animation: fadeIn 3s forwards;
 }
 
@@ -27,40 +27,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0;
+    font-size: 0; /* Убирает текст, если он есть */
 }
 
 /* Медиа-запросы для мобильных устройств */
 @media (max-width: 767px) {
     #logo {
-        background-position: center top;
-        background-size: contain;
-    }
-
-    #menu a {
-        font-size: 1.2rem; /* Изменение размера шрифта для меню на мобильных устройствах */
-    }
-
-    #social-links img {
-        width: 30px; /* Уменьшение размера иконок для мобильных устройств */
-        height: 30px;
+        background-position: center top; /* Центрирование изображения по верхнему краю */
+        background-size: contain; /* Уменьшение фона, чтобы он полностью помещался в элементе */
     }
 }
 
 /* Медиа-запросы для планшетов и менее крупных экранов */
 @media (min-width: 768px) and (max-width: 1024px) {
     #logo {
-        background-position: center center;
-        background-size: cover;
-    }
-
-    #menu a {
-        font-size: 1.3rem; /* Размер шрифта для меню на планшетах */
-    }
-
-    #social-links img {
-        width: 35px; /* Размер иконок для планшетов */
-        height: 35px;
+        background-position: center center; /* Центрирование изображения по центру */
+        background-size: cover; /* Обеспечивает покрытие фона на большом экране */
     }
 }
 
@@ -70,14 +52,14 @@ body {
     justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
-    opacity: 0;
-    animation: fadeIn 4s 1s forwards;
+    opacity: 0; /* Начальная непрозрачность */
+    animation: fadeIn 4s 1s forwards; /* Плавное появление с задержкой */
 }
 
 #menu a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.5rem; /* Исходный размер шрифта для меню */
+    font-size: 1.5rem;
 }
 
 /* Социальные ссылки */
@@ -87,13 +69,13 @@ body {
     left: 1rem;
     display: flex;
     gap: 1rem;
-    opacity: 0;
-    animation: fadeIn 4s 2s forwards;
+    opacity: 0; /* Начальная непрозрачность */
+    animation: fadeIn 4s 2s forwards; /* Плавное появление с задержкой */
 }
 
 #social-links img {
     width: 40px; /* Исходный размер иконок */
-    height: 40px;
+    height: 40px; /* Исходный размер иконок */
 }
 
 /* Скрытые разделы до полной загрузки */
