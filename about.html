@@ -7,32 +7,18 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Подключение шрифта Comfortaa -->
     <style>
-        /* Специфичные стили для страницы "About Me" */
-        #about-me-section {
-            padding: 3rem;
+        /* Общие стили для страницы About Me */
+        body {
+            font-family: 'Comfortaa', Arial, sans-serif; /* Подключение шрифта Comfortaa */
+            background-color: #000;
+            color: #fff;
             text-align: center;
-            opacity: 0; /* Начальная непрозрачность секции */
-            animation: fadeIn 2s forwards; /* Плавное появление секции */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
 
-        #about-me-heading {
-            opacity: 0; /* Начальная непрозрачность заголовка */
-            animation: fadeIn 2s forwards; /* Плавное появление заголовка */
-        }
-
-        #about-me-text {
-            font-size: 1.5rem;
-            margin-top: 1rem;
-            opacity: 0; /* Начальная непрозрачность текста */
-            animation: fadeIn 2s 1s forwards; /* Плавное появление текста с задержкой */
-        }
-
-        /* Плавное появление секции */
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-
-        /* Стили для стрелки возврата на главную страницу */
+        /* Стили для стрелки возврата */
         .home-link {
             position: absolute;
             top: 20px; /* Расположение на уровне с заголовком */
@@ -53,16 +39,34 @@
             transform: scale(0.9); /* Уменьшение стрелки при нажатии */
         }
 
-        /* Стиль для стрелки */
         .home-link::before {
             content: '←'; /* Стрелка влево */
             font-size: 24px; /* Размер стрелки */
         }
 
-        @media (max-width: 767px) {
-            .home-link {
-                font-size: 20px; /* Меньший размер стрелки для мобильных устройств */
-            }
+        /* Стили для заголовка */
+        #about-me-heading {
+            margin-top: 60px; /* Отступ сверху для выравнивания с стрелкой */
+            margin-bottom: 1rem; /* Отступ снизу для текста */
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        /* Стили для текста с эффектом плавного появления */
+        #about-me-text {
+            font-size: 1.5rem;
+            opacity: 0;
+            animation: fadeInText 3s 2s forwards; /* Задержка перед началом анимации текста */
+        }
+
+        /* Плавное появление заголовка */
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* Плавное появление текста */
+        @keyframes fadeInText {
+            to { opacity: 1; }
         }
     </style>
 </head>
@@ -70,13 +74,12 @@
     <!-- Ссылка на главную страницу -->
     <a href="index.html" class="home-link" title="Back to Home"></a>
 
-    <!-- Секция "About Me" -->
-    <section id="about-me-section">
-        <h2 id="about-me-heading">About Me</h2>
-        <p id="about-me-text">
-            Hello! My name is Dalin, and I’m a freelancer with a diverse skill set. I work with tools like CapCut, Adobe Photoshop, After Effects, and have experience in Python, CSS, and JavaScript. Additionally, I use Canva to create visual content. I recently moved to Toronto, Canada, to further develop my skills and explore new exciting projects. I’m dedicated to quality work and always strive to complete tasks as quickly as possible while considering my clients' needs. I’m fluent in English, Russian, Ukrainian, and Spanish, which allows me to work with clients from all over the world.
-        </p>
-    </section>
-    <script src="scripts.js"></script>
+    <!-- Заголовок -->
+    <h1 id="about-me-heading">About Me</h1>
+
+    <!-- Текст -->
+    <p id="about-me-text">
+        Hello! My name is Dalin, and I’m a freelancer with a diverse skill set. I work with tools like CapCut, Adobe Photoshop, After Effects, and have experience in Python, CSS, and JavaScript. Additionally, I use Canva to create visual content. I recently moved to Toronto, Canada, to further develop my skills and explore new exciting projects. I’m dedicated to quality work and always strive to complete tasks as quickly as possible while considering my clients' needs. I’m fluent in English, Russian, Ukrainian, and Spanish, which allows me to work with clients from all over the world.
+    </p>
 </body>
 </html>
