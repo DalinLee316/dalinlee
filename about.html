@@ -7,68 +7,76 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Подключение шрифта Comfortaa -->
     <style>
-        /* Стиль для стрелки возврата */
-        .back-link {
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .back-link svg {
-            width: 100%;
-            height: 100%;
-            fill: #fff;
-        }
-        .back-link:hover {
-            transform: scale(1.1);
+        /* Специфичные стили для страницы "About Me" */
+        #about-me-section {
+            padding: 3rem;
+            text-align: center;
+            opacity: 0; /* Начальная непрозрачность секции */
+            animation: fadeIn 2s forwards; /* Плавное появление секции */
         }
 
-        /* Плавное появление заголовка */
         #about-me-heading {
-            opacity: 0;
-            animation: fadeIn 2s forwards;
+            opacity: 0; /* Начальная непрозрачность заголовка */
+            animation: fadeIn 2s forwards; /* Плавное появление заголовка */
         }
 
-        /* Плавное появление текста */
-        #typed-text {
+        #about-me-text {
             font-size: 1.5rem;
-            white-space: pre-wrap; /* Поддержка переноса строк */
-            opacity: 0;
-            animation: fadeInText 4s 2s forwards; /* Плавное появление текста с задержкой */
+            margin-top: 1rem;
+            opacity: 0; /* Начальная непрозрачность текста */
+            animation: fadeIn 2s 1s forwards; /* Плавное появление текста с задержкой */
         }
 
-        /* Анимации */
+        /* Плавное появление секции */
         @keyframes fadeIn {
             to { opacity: 1; }
         }
 
-        @keyframes fadeInText {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        /* Стили для стрелки возврата на главную страницу */
+        .home-link {
+            position: absolute;
+            top: 20px; /* Расположение на уровне с заголовком */
+            left: 20px; /* Расположение в левом верхнем углу */
+            font-size: 24px; /* Размер стрелки */
+            color: #fff; /* Цвет стрелки */
+            text-decoration: none; /* Убрать подчеркивание */
+            z-index: 1000; /* Убедитесь, что ссылка находится поверх всего остального контента */
+            transition: transform 0.3s, opacity 0.3s; /* Плавные изменения при наведении и нажатии */
+        }
+
+        .home-link:hover {
+            transform: scale(1.1); /* Увеличение стрелки при наведении */
+            opacity: 0.8; /* Прозрачность при наведении */
+        }
+
+        .home-link:active {
+            transform: scale(0.9); /* Уменьшение стрелки при нажатии */
+        }
+
+        /* Стиль для стрелки */
+        .home-link::before {
+            content: '←'; /* Стрелка влево */
+            font-size: 24px; /* Размер стрелки */
+        }
+
+        @media (max-width: 767px) {
+            .home-link {
+                font-size: 20px; /* Меньший размер стрелки для мобильных устройств */
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Стрелка возврата на главную страницу -->
-    <div class="back-link" onclick="window.location.href='index.html';">
-        <!-- SVG для стрелки -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M12 2L3 12h9v8h6v-8h9L12 2z"/>
-        </svg>
-    </div>
+    <!-- Ссылка на главную страницу -->
+    <a href="index.html" class="home-link" title="Back to Home"></a>
+
+    <!-- Секция "About Me" -->
     <section id="about-me-section">
         <h2 id="about-me-heading">About Me</h2>
-        <p id="typed-text">
-            Hello! My name is Dalin, and I’m a freelancer with a diverse skill set.
-            I work with tools like CapCut, Adobe Photoshop, After Effects, and have experience in Python, CSS, and JavaScript.
-            Additionally, I use Canva to create visual content. I recently moved to Toronto, Canada, to further develop my skills and explore new exciting projects.
-            I’m dedicated to quality work and always strive to complete tasks as quickly as possible while considering my clients' needs.
-            I’m fluent in English, Russian, Ukrainian, and Spanish, which allows me to work with clients from all over the world.
-        </p> <!-- Текст с плавным появлением -->
+        <p id="about-me-text">
+            Hello! My name is Dalin, and I’m a freelancer with a diverse skill set. I work with tools like CapCut, Adobe Photoshop, After Effects, and have experience in Python, CSS, and JavaScript. Additionally, I use Canva to create visual content. I recently moved to Toronto, Canada, to further develop my skills and explore new exciting projects. I’m dedicated to quality work and always strive to complete tasks as quickly as possible while considering my clients' needs. I’m fluent in English, Russian, Ukrainian, and Spanish, which allows me to work with clients from all over the world.
+        </p>
     </section>
-    <script src="scripts.js"></script> <!-- Подключение скрипта -->
+    <script src="scripts.js"></script>
 </body>
 </html>
