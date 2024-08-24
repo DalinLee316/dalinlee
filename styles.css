@@ -34,7 +34,16 @@ body {
 @media (max-width: 767px) {
     #logo {
         background-position: center top; /* Центрирование изображения по верхнему краю */
-        background-size: contain; /* Уменьшение фона, чтобы он полностью помещался в элементе */
+        background-size: cover; /* Обеспечивает покрытие фона на мобильных устройствах */
+    }
+    
+    #menu {
+        margin-top: 1rem; /* Уменьшение отступа сверху для мобильных устройств */
+        gap: 1rem; /* Уменьшение расстояния между ссылками в меню */
+    }
+    
+    #menu a {
+        font-size: 1.2rem; /* Уменьшение размера шрифта для мобильных устройств */
     }
 }
 
@@ -42,7 +51,7 @@ body {
 @media (min-width: 768px) and (max-width: 1024px) {
     #logo {
         background-position: center center; /* Центрирование изображения по центру */
-        background-size: cover; /* Обеспечивает покрытие фона на большом экране */
+        background-size: cover; /* Обеспечивает покрытие фона на планшетах */
     }
 }
 
@@ -50,8 +59,8 @@ body {
 #menu {
     display: flex;
     justify-content: center;
-    gap: 3rem; /* Увеличенное расстояние между ссылками */
-    margin-top: 1rem; /* Приподнятие ссылок ближе к фоновому изображению */
+    gap: 2.5rem; /* Увеличенное расстояние между ссылками */
+    margin-top: 1.5rem; /* Приподнятие меню ближе к фоновому изображению */
     opacity: 0; /* Начальная непрозрачность */
     animation: fadeIn 4s 1s forwards; /* Плавное появление с задержкой */
 }
@@ -59,14 +68,12 @@ body {
 #menu a {
     color: #fff;
     text-decoration: none;
-    font-size: 2rem; /* Увеличенный размер шрифта для ссылок */
-    position: relative; /* Необходим для анимации */
-    transition: transform 0.3s ease, color 0.3s ease; /* Плавная анимация при наведении */
+    font-size: 1.75rem; /* Увеличение размера шрифта */
+    transition: transform 0.3s ease; /* Анимация при наведении */
 }
 
 #menu a:hover {
     transform: scale(1.1); /* Увеличение ссылки при наведении */
-    color: #f0f0f0; /* Изменение цвета текста при наведении */
 }
 
 /* Социальные ссылки */
@@ -104,22 +111,4 @@ body {
 /* Плавное появление контента */
 .content-appear {
     animation: fadeIn 2s forwards;
-}
-
-/* Ссылка на главную страницу */
-.return-home {
-    position: absolute;
-    top: 20px; /* Отступ сверху */
-    left: 20px; /* Отступ слева */
-    width: 80px; /* Увеличенный размер изображения */
-    height: auto;
-    background: url('https://github.com/DalinLee316/dalinlee/raw/main/palms-pattern.jpg') no-repeat center center;
-    background-size: cover;
-    display: block;
-    z-index: 10; /* Слой выше, чтобы не скрывалось */
-    transition: transform 0.3s ease; /* Плавная анимация при наведении */
-}
-
-.return-home:hover {
-    transform: scale(1.1); /* Увеличение при наведении */
 }
