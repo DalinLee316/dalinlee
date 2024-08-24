@@ -50,8 +50,8 @@ body {
 #menu {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 3rem; /* Увеличенное расстояние между ссылками */
+    margin-top: 1rem; /* Приподнятие ссылок ближе к фоновому изображению */
     opacity: 0; /* Начальная непрозрачность */
     animation: fadeIn 4s 1s forwards; /* Плавное появление с задержкой */
 }
@@ -59,7 +59,14 @@ body {
 #menu a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2rem; /* Увеличенный размер шрифта для ссылок */
+    position: relative; /* Необходим для анимации */
+    transition: transform 0.3s ease, color 0.3s ease; /* Плавная анимация при наведении */
+}
+
+#menu a:hover {
+    transform: scale(1.1); /* Увеличение ссылки при наведении */
+    color: #f0f0f0; /* Изменение цвета текста при наведении */
 }
 
 /* Социальные ссылки */
@@ -97,4 +104,31 @@ body {
 /* Плавное появление контента */
 .content-appear {
     animation: fadeIn 2s forwards;
+}
+
+/* Видео */
+video {
+    width: 100%;
+    height: auto;
+    max-width: 70%; /* Уменьшенный масштаб видео */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Ссылка на главную страницу */
+.return-home {
+    position: absolute;
+    top: 20px; /* Отступ сверху */
+    left: 20px; /* Отступ слева */
+    width: 80px; /* Увеличенный размер изображения */
+    height: auto;
+    background: url('https://github.com/DalinLee316/dalinlee/raw/main/palms-pattern.jpg') no-repeat center center;
+    background-size: cover;
+    display: block;
+    z-index: 10; /* Слой выше, чтобы не скрывалось */
+    transition: transform 0.3s ease; /* Плавная анимация при наведении */
+}
+
+.return-home:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
 }
