@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Подключение шрифта Comfortaa -->
+    <style>
+        /* Специфичные стили для страницы "My Projects" */
+        .video-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            margin-top: 60px; /* Отступ от заголовка для избегания перекрытия */
+            opacity: 0; /* Начальная непрозрачность */
+            animation: fadeInVideo 2s 1s forwards; /* Плавное появление видео с задержкой */
+        }
+
+        .video-container video {
+            width: 50%; /* Уменьшение масштаба видео до 50% */
+            height: auto;
+            object-fit: cover; /* Сохранение пропорций видео */
+        }
+
+        .fadeInTitle {
+            opacity: 0; /* Начальная непрозрачность заголовка */
+            animation: fadeInTitle 2s forwards; /* Плавное появление заголовка */
+            margin-top: 20px;
+            position: relative; /* Относительное позиционирование для ссылки */
+        }
+
+        /* Плавное появление заголовка */
+        @keyframes fadeInTitle {
+            to { opacity: 1; }
+        }
+
+        /* Плавное появление видео */
+        @keyframes fadeInVideo {
+            to { opacity: 1; }
+        }
+
+        /* Стили для стрелки */
+        .home-link {
+            position: absolute;
+            top: 20px; /* Расположение на уровне с заголовком */
+            left: 20px; /* Расположение в левом верхнем углу */
+            font-size: 24px; /* Размер стрелки */
+            color: #fff; /* Цвет стрелки */
+            text-decoration: none; /* Убрать подчеркивание */
+            z-index: 1000; /* Убедитесь, что ссылка находится поверх всего остального контента */
+            transition: transform 0.3s, opacity 0.3s; /* Плавные изменения при наведении и нажатии */
+        }
+
+        .home-link:hover {
+            transform: scale(1.1); /* Увеличение стрелки при наведении */
+            opacity: 0.8; /* Прозрачность при наведении */
+        }
+
+        .home-link:active {
+            transform: scale(0.9); /* Уменьшение стрелки при нажатии */
+        }
+
+        /* Стиль для стрелки */
+        .home-link::before {
+            content: '←'; /* Стрелка влево */
+            font-size: 24px; /* Размер стрелки */
+        }
+
+        @media (max-width: 767px) {
+            .home-link {
+                font-size: 20px; /* Меньший размер стрелки для мобильных устройств */
+            }
+
+            .video-container video {
+                width: 90%; /* Увеличение масштаба видео для мобильных устройств */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Ссылка на главную страницу -->
+    <a href="index.html" class="home-link" title="Back to Home"></a>
+
+    <!-- Заголовок -->
+    <h1 class="fadeInTitle">My Projects</h1>
+
+    <!-- Видео -->
+    <div class="video-container">
+        <video controls>
+            <source src="intro.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+    </div>
+    
+    <script>
+        // Скрипт для открытия видео во весь экран при нажатии
+        document.querySelector('video').addEventListener('click', function () {
+            if (this.requestFullscreen) {
+                this.requestFullscreen();
+            } else if (this.mozRequestFullScreen) { /* Firefox */
+                this.mozRequestFullScreen();
+            } else if (this.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                this.webkitRequestFullscreen();
+            } else if (this.msRequestFullscreen) { /* IE/Edge */
+                this.msRequestFullscreen();
+            }
+        });
+    </script>
+</body>
+</html>
