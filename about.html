@@ -32,12 +32,14 @@
         /* Эффект печатной машинки */
         #typed-text {
             font-size: 1.5rem;
-            white-space: pre;
+            white-space: pre-wrap; /* Поддержка переноса строк */
             border-right: 2px solid #fff;
-            width: 0;
             overflow: hidden;
             opacity: 0;
             animation: typing 4s steps(40, end) 2s forwards, blink-caret 0.75s step-end infinite;
+            display: inline-block; /* Убедитесь, что текст не выходит за пределы блока */
+            width: auto; /* Ширина автоматически */
+            max-width: 100%; /* Не позволяет тексту выходить за пределы контейнера */
         }
 
         /* Анимации */
@@ -71,9 +73,13 @@
             }, 1000);
 
             // Эффект печатной машинки для текста на странице About Me
-            const text = "Hello! My name is Dalin, and I’m a freelancer with a diverse skill set. I work with tools like CapCut, Adobe Photoshop, After Effects, and have experience in Python, CSS, and JavaScript. Additionally, I use Canva to create visual content. I recently moved to Toronto, Canada, to further develop my skills and explore new exciting projects. I’m dedicated to quality work and always strive to complete tasks as quickly as possible while considering my clients' needs. I’m fluent in English, Russian, Ukrainian, and Spanish, which allows me to work with clients from all over the world.";
+            const text = `Hello! My name is Dalin, and I’m a freelancer with a diverse skill set.
+I work with tools like CapCut, Adobe Photoshop, After Effects, and have experience in Python, CSS, and JavaScript.
+Additionally, I use Canva to create visual content. I recently moved to Toronto, Canada, to further develop my skills and explore new exciting projects.
+I’m dedicated to quality work and always strive to complete tasks as quickly as possible while considering my clients' needs.
+I’m fluent in English, Russian, Ukrainian, and Spanish, which allows me to work with clients from all over the world.`;
             let index = 0;
-            const speed = 50;
+            const speed = 30; // Увеличенная скорость печатания
             const typedTextElement = document.getElementById("typed-text");
 
             function typeWriter() {
