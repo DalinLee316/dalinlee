@@ -5,12 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Специфичные стили для страницы "My Projects" */
+        .video-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            margin-top: 20px;
+            opacity: 0; /* Начальная непрозрачность */
+            animation: fadeInVideo 2s 1s forwards; /* Плавное появление видео с задержкой */
+        }
+
+        .video-container video {
+            width: 30%; /* Уменьшение масштаба видео до 70% */
+            height: auto;
+            object-fit: cover; /* Сохранение пропорций видео */
+        }
+
+        .fadeInTitle {
+            opacity: 0; /* Начальная непрозрачность заголовка */
+            animation: fadeInTitle 2s forwards; /* Плавное появление заголовка */
+        }
+
+        /* Плавное появление заголовка */
+        @keyframes fadeInTitle {
+            to { opacity: 1; }
+        }
+
+        /* Плавное появление видео */
+        @keyframes fadeInVideo {
+            to { opacity: 1; }
+        }
+
+        /* Для открытия видео во весь экран */
+        .fullscreen-video {
+            width: 100vw; /* Ширина на весь экран */
+            height: 100vh; /* Высота на весь экран */
+        }
+    </style>
 </head>
 <body>
-    <h1>My Projects</h1>
-    <video width="100%" controls>
-        <source src="intro.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <!-- Заголовок -->
+    <h1 class="fadeInTitle">My Projects</h1>
+
+    <!-- Видео -->
+    <div class="video-container">
+        <video controls>
+            <source src="intro.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+    </div>
+    
+    <!-- Остальное содержимое -->
+    <p>Здесь вы можете разместить свои проекты.</p>
+
+    <script>
+        // Скрипт для открытия видео во весь экран при нажатии
+        document.querySelector('video').addEventListener('click', function () {
+            if (this.requestFullscreen) {
+                this.requestFullscreen();
+            } else if (this.mozRequestFullScreen) { /* Firefox */
+                this.mozRequestFullScreen();
+            } else if (this.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                this.webkitRequestFullscreen();
+            } else if (this.msRequestFullscreen) { /* IE/Edge */
+                this.msRequestFullscreen();
+            }
+        });
+    </script>
 </body>
 </html>
