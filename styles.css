@@ -61,6 +61,11 @@ body {
         font-size: 1.8rem; /* Уменьшение размера шрифта */
     }
 
+/* Применение шрифта Poppins только к ссылкам на главной странице */
+#menu a {
+    font-family: 'Poppins', sans-serif; /* Установка шрифта Poppins */
+}
+
     /* Убираем лишнее пространство снизу */
     body {
         padding-bottom: 0;
