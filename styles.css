@@ -2,7 +2,9 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Comfortaa', Arial, sans-serif; /* Подключение шрифта Comfortaa */
+    body {
+    font-family: 'Poppins', sans-serif;
+} /* Подключение шрифта Comfortaa */
     background-color: #000;
     color: #fff;
     text-align: center;
@@ -80,7 +82,7 @@ body {
 }
 
 #menu a {
-    font-family: 'Comfortaa', Arial, sans-serif; /* Применение шрифта Comfortaa к ссылкам */
+    font-family: 'Poppins', sans-serif; /* Применение шрифта Comfortaa к ссылкам */
     color: #fff;
     text-decoration: none;
     font-size: 2.5rem; /* Размер шрифта для ссылок на компьютере */
