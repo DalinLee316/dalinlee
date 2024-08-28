@@ -54,7 +54,7 @@ body {
     #menu {
         margin-top: 1rem; /* Уменьшение отступа сверху для мобильных устройств */
         gap: 1rem; /* Меньший интервал между ссылками */
-        flex-direction: row; /* Расположение ссылок в колонку */
+        flex-direction: row; /* Расположение ссылок в ряд */
     }
 
     #menu a {
@@ -91,6 +91,7 @@ body {
     color: #fff;
     text-decoration: none;
     font-size: 2.5rem; /* Увеличение размера шрифта */
+    font-family: 'Poppins', sans-serif; /* Устанавливаем шрифт Poppins */
     transition: transform 0.3s ease; /* Анимация при наведении */
 }
 
