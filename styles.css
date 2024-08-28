@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Comfortaa', Arial, sans-serif; /* Подключение шрифта Comfortaa */
+    font-family: Arial, sans-serif; /* Подключение шрифта Comfortaa */
     background-color: #000;
     color: #fff;
     text-align: center;
