@@ -134,3 +134,33 @@ body {
 .content-appear {
     animation: fadeIn 2s forwards;
 }
+
+/* Специфичные стили для страницы "My Projects" */
+.video-container {
+    display: flex;
+    justify-content: center; /* Центрирование видео в контейнере */
+    gap: 20px; /* Расстояние между видео */
+    padding: 20px;
+    margin-top: 60px; /* Отступ от заголовка */
+    opacity: 1; /* Убираем начальную непрозрачность */
+}
+
+.video-container video {
+    width: 45%; /* Ширина каждого видео 45% от ширины контейнера */
+    height: auto;
+    object-fit: cover; /* Сохранение пропорций видео */
+    border: 2px solid #fff; /* Белая рамка вокруг видео */
+    border-radius: 8px; /* Закругленные углы рамки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень под видео */
+}
+
+@media (max-width: 767px) {
+    .video-container {
+        flex-direction: column; /* Вертикальное расположение на мобильных устройствах */
+        align-items: center; /* Центрирование видео */
+    }
+
+    .video-container video {
+        width: 90%; /* Ширина видео на мобильных устройствах */
+    }
+}
