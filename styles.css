@@ -145,12 +145,15 @@ body {
     justify-content: center; /* Выравнивание видео по центру */
     gap: 20px; /* Расстояние между видео */
     flex-wrap: wrap; /* Позволяет переносить видео на следующую строку, если они не помещаются в ряд */
+    background-color: rgba(0, 0, 0, 0.7); /* Тёмный полупрозрачный фон за видео */
+    padding: 1rem;
+    border-radius: 10px;
 }
 
 .video-container video {
     width: 45%; /* Ширина каждого видео 45% от ширины контейнера */
     max-width: 500px; /* Максимальная ширина видео */
-    border: 2px solid #fff; /* Белая рамка вокруг видео */
+    border: 4px solid #fff; /* Белая рамка вокруг видео */
     border-radius: 10px; /* Закругление углов */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень под видео */
 }
