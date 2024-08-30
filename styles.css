@@ -135,3 +135,12 @@ body {
 .content-appear {
     animation: fadeIn 2s forwards;
 }
+
+#my-projects video {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border: 2px solid #fff; /* Белая рамка вокруг видео */
+    border-radius: 10px; /* Закругление углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень под видео */
+}
