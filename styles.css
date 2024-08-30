@@ -136,11 +136,29 @@ body {
     animation: fadeIn 2s forwards;
 }
 
-#my-projects video {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
+#my-projects {
+    padding: 2rem;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center; /* Выравнивание видео по центру */
+    gap: 20px; /* Расстояние между видео */
+    flex-wrap: wrap; /* Позволяет переносить видео на следующую строку, если они не помещаются в ряд */
+}
+
+.video-container video {
+    width: 45%; /* Ширина каждого видео 45% от ширины контейнера */
+    max-width: 500px; /* Максимальная ширина видео */
     border: 2px solid #fff; /* Белая рамка вокруг видео */
     border-radius: 10px; /* Закругление углов */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень под видео */
 }
+
+@media (max-width: 768px) {
+    .video-container video {
+        width: 100%; /* Ширина видео на мобильных устройствах */
+        max-width: none;
+    }
+}
+
