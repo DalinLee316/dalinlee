@@ -93,8 +93,20 @@
             Ваш браузер не поддерживает видео.
         </video>
     </div>
-    
-    <script>
+    <div id="my-projects-video">
+    <video controls>
+        <source src="Black.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео-тег.
+    </video>
+</div>
+    <div id="my-projects-video">
+    <video controls>
+        <source src="Black.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео-тег.
+    </video>
+</div>
+
+     <script>
         // Скрипт для открытия видео во весь экран при нажатии
         document.querySelector('video').addEventListener('click', function () {
             if (this.requestFullscreen) {
