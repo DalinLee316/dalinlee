@@ -86,26 +86,36 @@
     <!-- Заголовок -->
     <h1 class="fadeInTitle">My Projects</h1>
 
-    <!-- Видео -->
+    <!-- Первое видео -->
     <div class="video-container">
         <video controls>
             <source src="intro.mp4" type="video/mp4">
             Ваш браузер не поддерживает видео.
         </video>
     </div>
+
+    <!-- Второе видео -->
+    <div class="video-container">
+        <video controls>
+            <source src="Black.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+    </div>
     
     <script>
         // Скрипт для открытия видео во весь экран при нажатии
-        document.querySelector('video').addEventListener('click', function () {
-            if (this.requestFullscreen) {
-                this.requestFullscreen();
-            } else if (this.mozRequestFullScreen) { /* Firefox */
-                this.mozRequestFullScreen();
-            } else if (this.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                this.webkitRequestFullscreen();
-            } else if (this.msRequestFullscreen) { /* IE/Edge */
-                this.msRequestFullscreen();
-            }
+        document.querySelectorAll('video').forEach(function(video) {
+            video.addEventListener('click', function () {
+                if (this.requestFullscreen) {
+                    this.requestFullscreen();
+                } else if (this.mozRequestFullScreen) { /* Firefox */
+                    this.mozRequestFullScreen();
+                } else if (this.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                    this.webkitRequestFullscreen();
+                } else if (this.msRequestFullscreen) { /* IE/Edge */
+                    this.msRequestFullscreen();
+                }
+            });
         });
     </script>
 </body>
